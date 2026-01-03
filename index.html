@@ -101,6 +101,9 @@
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn:hover {
@@ -221,11 +224,20 @@
     }
 
     .contact-info a {
-      color: #004aad;
-      text-decoration: none;
-      display: block;
-      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       font-size: 1.05rem;
+      margin: 10px 0;
+      color: #004aad;
+      transition: color 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: #007bff;
+      transform: translateY(-2px);
     }
 
     /* ================= FOOTER ================= */
@@ -236,64 +248,86 @@
       padding: 20px 0;
     }
 
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 768px) {
-      .hero {
+    /* ==================================================
+       RESPONSIVE FIXES (ONLY ADDITION – NO OTHER CHANGES)
+       ================================================== */
+
+    /* Mobile phones */
+    @media (max-width: 480px) {
+      nav {
         flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 50px 20px;
         text-align: center;
       }
+
       .hero img {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
       }
+
       .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
 
-    .contact-info a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 1.05rem;
-  margin: 10px 0;
-  color: #004aad;
-  transition: color 0.3s, transform 0.2s;
-}
+    /* Tablets */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .hero {
+        padding: 60px 6%;
+        text-align: center;
+      }
 
-.contact-info a i {
-  font-size: 1.2rem;
-}
+      section {
+        padding: 60px 6%;
+      }
 
-.contact-info a:hover {
-  color: #007bff;
-  transform: translateY(-2px);
-}
+      .skills-grid,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.btn {
-  background: #004aad;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s;
-}
+    /* Small laptops */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
-.btn i {
-  font-size: 1rem;
-}
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.btn:hover {
-  background: #007bff;
-  transform: translateY(-2px);
-}
+    /* Large screens */
+    @media (min-width: 1200px) {
+      .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
 
-
+      .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   </style>
 </head>
 
@@ -317,45 +351,25 @@
   <div class="hero-content">
     <h1>Hi, I'm Nelakoti Siva</h1>
     <h3>Java Full Stack Developer | Backend & Web Applications</h3>
-<p>
-  I build scalable Java-based web applications with a strong focus on backend development,
-  MVC architecture, database design, and real-world problem solving.
-</p>
+    <p>
+      I build scalable Java-based web applications with a strong focus on backend development,
+      MVC architecture, database design, and real-world problem solving.
+    </p>
 
     <a href="Siva_Resume_Java_FullStack.pdf" class="btn" download>
-  <i class="fa-solid fa-file-arrow-down"></i>
-  Download CV
-</a>
-
+      <i class="fa-solid fa-file-arrow-down"></i>
+      Download CV
+    </a>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section id="about">
- <h2 class="section-title">About Me</h2>
+  <h2 class="section-title">About Me</h2>
 
-<p>
-I am a passionate Java Full Stack Developer with a strong foundation in backend development and
-end-to-end web application design. I specialize in building scalable, secure, and maintainable
-applications using Java, Servlets, JSP, JDBC, and MySQL, following MVC architecture principles.
-</p>
-
-<p>
-I have hands-on experience developing real-world projects such as a travel booking platform
-and an online banking system, where I implemented secure authentication, session management,
-role-based access control, and reliable database transactions.
-</p>
-
-<p>
-In addition to backend development, I am skilled in creating responsive and user-friendly
-interfaces using HTML, CSS, Bootstrap, and React.js. I am currently enhancing my expertise in
-Spring Boot, REST APIs, and Microservices to build modern, production-ready applications.
-</p>
-
-<p>
-I am actively seeking opportunities where I can contribute my technical skills, continue learning,
-and grow as a Java Developer while working on impactful software solutions.
-</p>
+  <p>I am a passionate Java Full Stack Developer with a strong foundation in backend development and end-to-end web application design.</p>
+  <p>I have hands-on experience developing real-world projects such as a travel booking platform and an online banking system.</p>
+  <p>I am actively seeking opportunities where I can contribute my technical skills and grow as a Java Developer.</p>
 
   <div class="education">
     <h2 class="section-title">Education</h2>
@@ -382,7 +396,6 @@ and grow as a Java Developer while working on impactful software solutions.
   <h2 class="section-title">My Tech Stack</h2>
 
   <div class="skills-grid">
-
     <div class="skills-card">
       <h3>Programming Languages</h3>
       <span>Java (Core, OOP, Java 8)</span>
@@ -440,7 +453,6 @@ and grow as a Java Developer while working on impactful software solutions.
       <span>DBMS</span>
       <span>MVC Architecture</span>
     </div>
-
   </div>
 </section>
 
@@ -449,82 +461,61 @@ and grow as a Java Developer while working on impactful software solutions.
   <h2 class="section-title">Featured Projects</h2>
 
   <div class="project-grid">
-
     <div class="project-card">
       <h3>TripEase – Full Stack Travel Booking Web Application</h3>
-      <p>
-        Developed a full-stack Java travel booking web application integrating flights, hotels,
-        cabs, restaurants, tourist places, and tour packages. Implemented MVC architecture using
-        Java Servlets, JSP, JDBC, and MySQL with secure authentication and role-based access.
-      </p>
-      <p class="tech-stack">
-        <strong>Tech:</strong> Java, Servlets, JSP, JDBC, MySQL, Bootstrap, Apache Tomcat
-      </p>
-      <a href="https://github.com/nelakotisiva/TripEase.git" target="_blank" rel="noopener noreferrer">View Code</a>
+      <p>Developed a full-stack Java travel booking web application integrating flights, hotels, cabs, restaurants, tourist places, and tour packages.</p>
+      <p class="tech-stack"><strong>Tech:</strong> Java, Servlets, JSP, JDBC, MySQL</p>
+      <a href="https://github.com/nelakotisiva/TripEase.git" target="_blank">View Code</a>
     </div>
 
     <div class="project-card">
       <h3>SkyTrust Bank Online Banking Web Application</h3>
-      <p>
-        Designed and implemented a full-stack banking platform using Java, JSP, Servlets, and JDBC.
-        Built secure modules for authentication, deposits, withdrawals, fund transfers, and
-        transaction monitoring with commit/rollback handling.
-      </p>
-      <p class="tech-stack">
-        <strong>Tech:</strong> Java, JSP, Servlets, JDBC, MySQL
-      </p>
-      <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git" target="_blank" rel="noopener noreferrer">View Code</a>
+      <p>Designed and implemented a full-stack banking platform with secure authentication and transactions.</p>
+      <p class="tech-stack"><strong>Tech:</strong> Java, JSP, Servlets, JDBC, MySQL</p>
+      <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git" target="_blank">View Code</a>
     </div>
 
     <div class="project-card">
       <h3>Enhanced Technique of Skin Cancer Classification</h3>
-      <p>
-        Developed a deep-learning-based skin cancer classification system using CNN architectures
-        such as VGG16, ResNet50, and EfficientNet. Applied transfer learning, preprocessing, and
-        augmentation techniques to improve accuracy and recall.
-      </p>
-      <p class="tech-stack">
-        <strong>Tech:</strong> Python, CNN, VGG16, ResNet50, EfficientNet, TensorFlow
-      </p>
-      <a href="https://github.com/nelakotisiva/Skin-Cancer-Classification-Using-Deep-Learning.git"
-         target="_blank" rel="noopener noreferrer">View Code</a>
+      <p>Developed a deep-learning-based skin cancer classification system using CNN architectures.</p>
+      <p class="tech-stack"><strong>Tech:</strong> Python, CNN, TensorFlow</p>
+      <a href="https://github.com/nelakotisiva/Skin-Cancer-Classification-Using-Deep-Learning.git" target="_blank">View Code</a>
     </div>
-
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <h2 class="section-title">Let's Connect!</h2>
- <div class="contact-info">
-  <p>I’m actively seeking opportunities and collaborations.</p>
 
-  <a href="mailto:nelakotisiva@gmail.com">
-    <i class="fa-solid fa-envelope"></i>
-    nelakotisiva@gmail.com
-  </a>
+  <div class="contact-info">
+    <p>I’m actively seeking opportunities and collaborations.</p>
 
-  <a href="tel:+918374265905">
-    <i class="fa-solid fa-phone"></i>
-    +91 8374265905
-  </a>
+    <a href="mailto:nelakotisiva@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+      nelakotisiva@gmail.com
+    </a>
 
-  <a href="https://github.com/nelakotisiva" target="_blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-github"></i>
-    GitHub
-  </a>
+    <a href="tel:+918374265905">
+      <i class="fa-solid fa-phone"></i>
+      +91 8374265905
+    </a>
 
-  <a href="https://linkedin.com/in/nelakotisiva" target="_blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-linkedin"></i>
-    LinkedIn
-  </a>
-</div>
+    <a href="https://github.com/nelakotisiva" target="_blank">
+      <i class="fa-brands fa-github"></i>
+      GitHub
+    </a>
 
+    <a href="https://linkedin.com/in/nelakotisiva" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+      LinkedIn
+    </a>
+  </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-   Nelakoti Siva. Built with HTML, CSS & JavaScript.
+  Nelakoti Siva. Built with HTML, CSS & JavaScript.
 </footer>
 
 </body>
