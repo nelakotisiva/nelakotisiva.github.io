@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nelakoti Siva | Portfolio</title>
+
   <style>
     * {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
+
     body {
       background-color: #f5f7fa;
       color: #222;
     }
 
-    /* NAVBAR */
+    /* ================= NAVBAR ================= */
     nav {
       display: flex;
       justify-content: space-between;
@@ -27,26 +30,30 @@
       top: 0;
       z-index: 100;
     }
+
     nav h2 {
       font-size: 1.4rem;
       letter-spacing: 1px;
     }
+
     nav ul {
       display: flex;
       gap: 25px;
       list-style: none;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #ffd700;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -56,6 +63,7 @@
       gap: 40px;
       background: white;
     }
+
     .hero img {
       width: 250px;
       height: 250px;
@@ -63,40 +71,47 @@
       object-fit: cover;
       border: 5px solid #004aad;
     }
+
     .hero-content {
       max-width: 500px;
     }
+
     .hero-content h1 {
       font-size: 2.4rem;
       color: #004aad;
     }
+
     .hero-content h3 {
       font-size: 1.3rem;
       margin: 10px 0;
       color: #555;
     }
+
     .hero-content p {
       margin-bottom: 20px;
       font-size: 1rem;
       color: #333;
     }
+
     .btn {
       background: #004aad;
       color: white;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 25px;
       text-decoration: none;
-      transition: all 0.3s;
       font-weight: 600;
+      transition: all 0.3s;
     }
+
     .btn:hover {
       background: #007bff;
     }
 
-    /* SECTIONS */
+    /* ================= SECTIONS ================= */
     section {
       padding: 70px 10%;
     }
+
     h2.section-title {
       color: #004aad;
       font-size: 1.8rem;
@@ -104,29 +119,33 @@
       border-left: 5px solid #004aad;
       padding-left: 10px;
     }
+
     p {
       line-height: 1.7;
     }
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
     .education {
       margin-top: 25px;
     }
+
     .edu-item {
       margin-bottom: 15px;
     }
+
     .edu-item h4 {
       color: #004aad;
       font-size: 1.1rem;
     }
 
-    /* SKILLS */
+    /* ================= SKILLS ================= */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
       margin-top: 25px;
     }
+
     .skills-card {
       background: white;
       border-radius: 12px;
@@ -134,13 +153,16 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
+
     .skills-card:hover {
       transform: translateY(-5px);
     }
+
     .skills-card h3 {
       margin-bottom: 10px;
       color: #004aad;
     }
+
     .skills-card span {
       display: inline-block;
       background: #004aad;
@@ -151,12 +173,13 @@
       font-size: 0.85rem;
     }
 
-    /* PROJECTS */
+    /* ================= PROJECTS ================= */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
+
     .project-card {
       background: white;
       padding: 20px;
@@ -164,26 +187,39 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
+
     .project-card:hover {
       transform: translateY(-6px);
     }
+
     .project-card h3 {
       color: #004aad;
       margin-bottom: 10px;
     }
+
     .project-card p {
       font-size: 0.95rem;
     }
+
+    .tech-stack {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
     .project-card a {
+      display: inline-block;
+      margin-top: 10px;
       color: #007bff;
       text-decoration: none;
       font-weight: 600;
     }
 
-    /* CONTACT */
+    /* ================= CONTACT ================= */
     .contact-info {
       text-align: center;
     }
+
     .contact-info a {
       color: #004aad;
       text-decoration: none;
@@ -192,7 +228,7 @@
       font-size: 1.05rem;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
     footer {
       background: #004aad;
       color: white;
@@ -200,123 +236,296 @@
       padding: 20px 0;
     }
 
-    /* RESPONSIVE */
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 768px) {
-      .hero { flex-direction: column; text-align: center; }
-      .hero img { width: 180px; height: 180px; }
-      .hero-content h1 { font-size: 1.8rem; }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero img {
+        width: 180px;
+        height: 180px;
+      }
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
     }
+
+    .contact-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  margin: 10px 0;
+  color: #004aad;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.contact-info a i {
+  font-size: 1.2rem;
+}
+
+.contact-info a:hover {
+  color: #007bff;
+  transform: translateY(-2px);
+}
+
+.btn {
+  background: #004aad;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.btn i {
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #007bff;
+  transform: translateY(-2px);
+}
+
+
   </style>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2>Nelakoti Siva</h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <h2>Nelakoti Siva</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <img src="Myimage.JPG" alt="Profile Picture">
-    <div class="hero-content">
-      <h1>Hi, I'm Nelakoti Siva</h1>
-      <h3>Java Full Stack Developer & AI Enthusiast</h3>
-      <p>I’m passionate about building full-stack applications and AI-based systems that make a real-world impact.</p>
-      <a href="Nelakoti_Siva_resume.pdf" class="btn" download>📄 Download CV</a>
-    </div>
-  </section>
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <img src="Myimage.JPG" alt="Nelakoti Siva – Java Full Stack Developer">
+  <div class="hero-content">
+    <h1>Hi, I'm Nelakoti Siva</h1>
+    <h3>Java Full Stack Developer | Backend & Web Applications</h3>
+<p>
+  I build scalable Java-based web applications with a strong focus on backend development,
+  MVC architecture, database design, and real-world problem solving.
+</p>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>I’m a motivated Software Developer with strong skills in Java, full-stack development, and AI. I’ve developed practical projects in Python, web technologies, and databases, and I’m currently advancing my expertise through Java Full Stack Development training at Pentagon Space.</p>
-    
-    <div class="education">
-      <h2 class="section-title">Education</h2>
-      <div class="edu-item">
-        <h4>Sree Vidyanikethan Engineering College</h4>
-        <p>B.Tech in Electronics and Communication Engineering (2021–2025) | CGPA: 7.85/10</p>
-      </div>
-      <div class="edu-item">
-        <h4>Narayana Junior College, Pulivendula</h4>
-        <p>Intermediate (MPC) (2019–2021) | 82%</p>
-      </div>
-      <div class="edu-item">
-        <h4>Board of Secondary Education, Andhra Pradesh</h4>
-        <p>SSC (2018–2019) | GPA: 9.8/10</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2 class="section-title">My Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="skills-card">
-        <h3>Languages</h3>
-        <span>Java</span><span>SQL</span><span>JavaScript</span><span>Python</span><span>HTML</span><span>CSS</span>
-      </div>
-      <div class="skills-card">
-        <h3>Frameworks & Tools</h3>
-        <span>Bootstrap</span><span>J2EE</span><span>JDBC API</span><span>Servlets</span><span>Maven</span><span>ReactJS</span><span>Git</span><span>GitHub</span>
-      </div>
-      <div class="skills-card">
-        <h3>Concepts</h3>
-        <span>OOPS</span><span>Data Structures</span><span>Algorithms</span><span>DBMS</span>
-      </div>
-    </div>
-  </section>
-
- <!-- PROJECTS -->
-<section id="projects">
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="project-grid">
-
-   <div class="project-card">
-  <h3>Enhanced Technique of Skin Cancer Classification</h3>
-  <p>Developed a deep-learning based skin cancer classification system using advanced CNN architectures such as VGG16, ResNet50, and EfficientNet. Implemented preprocessing techniques including image resizing, normalization, and augmentation to improve generalization. Applied transfer learning and fine-tuning to achieve high accuracy in detecting melanoma and other skin lesions while enhancing recall for malignant cases.</p>
-  <a href="https://github.com/nelakotisiva/Skin-Cancer-Classification-Using-Deep-Learning.git">View Code</a>
-</div>
-
-<div class="project-card">
-  <h3>Sentiment Analysis by Input Text and Voice</h3>
-  <p>Created an intelligent sentiment analysis application capable of detecting emotional tone from both user text and voice input. Integrated NLTK’s VADER model for text sentiment evaluation and combined it with speech-to-text processing for real-time emotion recognition. Built a unified classification pipeline to categorize user sentiment into positive, negative, and neutral with high accuracy.</p>
-  <a href="https://github.com/nelakotisiva/NEW_SENTIMENT-INTENSITY-ANALYZER-USING-VADER">View Code</a>
-</div>
-
-<div class="project-card">
-  <h3>SkyTrust Bank Online Banking Web Application</h3>
-  <p>Designed and implemented a full-stack banking platform using Java, JSP, Servlets, and JDBC following MVC architecture. Built secure modules for authentication, deposits, withdrawals, fund transfers, and transaction monitoring. Applied transaction management with commit/rollback and optimized MySQL queries for reliable data handling. Developed user-friendly JSP dashboards ensuring responsive and seamless banking operations.</p>
-  <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git">View Code</a>
-</div>
-
+    <a href="Siva_Resume_Java_FullStack.pdf" class="btn" download>
+  <i class="fa-solid fa-file-arrow-down"></i>
+  Download CV
+</a>
 
   </div>
 </section>
 
+<!-- ================= ABOUT ================= -->
+<section id="about">
+ <h2 class="section-title">About Me</h2>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2 class="section-title">Let's Connect!</h2>
-    <div class="contact-info">
-      <p>I’m actively seeking opportunities and collaborations. Let’s get in touch!</p>
-      <a href="mailto:nelakotisiva@gmail.com">📧 nelakotisiva@gmail.com</a>
-      <a href="tel:+918374265905">📞 +91 8374265905</a>
-      <a href="https://github.com/nelakotisiva" target="_blank">💻 GitHub</a>
-      <a href="https://linkedin.com/in/nelakotisiva" target="_blank">🔗 LinkedIn</a>
+<p>
+I am a passionate Java Full Stack Developer with a strong foundation in backend development and
+end-to-end web application design. I specialize in building scalable, secure, and maintainable
+applications using Java, Servlets, JSP, JDBC, and MySQL, following MVC architecture principles.
+</p>
+
+<p>
+I have hands-on experience developing real-world projects such as a travel booking platform
+and an online banking system, where I implemented secure authentication, session management,
+role-based access control, and reliable database transactions.
+</p>
+
+<p>
+In addition to backend development, I am skilled in creating responsive and user-friendly
+interfaces using HTML, CSS, Bootstrap, and React.js. I am currently enhancing my expertise in
+Spring Boot, REST APIs, and Microservices to build modern, production-ready applications.
+</p>
+
+<p>
+I am actively seeking opportunities where I can contribute my technical skills, continue learning,
+and grow as a Java Developer while working on impactful software solutions.
+</p>
+
+  <div class="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-item">
+      <h4>Sree Vidyanikethan Engineering College</h4>
+      <p>B.Tech in Electronics and Communication Engineering (2021–2025) | CGPA: 7.85/10</p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Nelakoti Siva. Designed with ❤️ and dedication.
-  </footer>
+    <div class="edu-item">
+      <h4>Narayana Junior College, Pulivendula</h4>
+      <p>Intermediate (MPC) (2019–2021) | 82%</p>
+    </div>
+
+    <div class="edu-item">
+      <h4>Board of Secondary Education, Andhra Pradesh</h4>
+      <p>SSC (2018–2019) | GPA: 9.8/10</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2 class="section-title">My Tech Stack</h2>
+
+  <div class="skills-grid">
+
+    <div class="skills-card">
+      <h3>Programming Languages</h3>
+      <span>Java (Core, OOP, Java 8)</span>
+      <span>SQL</span>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Backend Technologies</h3>
+      <span>Servlets</span>
+      <span>JDBC</span>
+      <span>Spring Boot (Basics)</span>
+      <span>REST APIs (Basics)</span>
+      <span>Microservices (Basics)</span>
+      <span>Maven</span>
+      <span>J2EE</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Frontend Technologies</h3>
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>Bootstrap</span>
+      <span>React.js</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Frameworks & Libraries</h3>
+      <span>Spring MVC</span>
+      <span>Hibernate (Basics)</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Databases</h3>
+      <span>MySQL</span>
+      <span>SQL</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Tools & Platforms</h3>
+      <span>Git</span>
+      <span>GitHub</span>
+      <span>Apache Tomcat</span>
+      <span>Eclipse</span>
+      <span>VS Code</span>
+      <span>MySQL Workbench</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Core Concepts</h3>
+      <span>OOPS</span>
+      <span>Data Structures</span>
+      <span>Algorithms</span>
+      <span>DBMS</span>
+      <span>MVC Architecture</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <h3>TripEase – Full Stack Travel Booking Web Application</h3>
+      <p>
+        Developed a full-stack Java travel booking web application integrating flights, hotels,
+        cabs, restaurants, tourist places, and tour packages. Implemented MVC architecture using
+        Java Servlets, JSP, JDBC, and MySQL with secure authentication and role-based access.
+      </p>
+      <p class="tech-stack">
+        <strong>Tech:</strong> Java, Servlets, JSP, JDBC, MySQL, Bootstrap, Apache Tomcat
+      </p>
+      <a href="https://github.com/nelakotisiva/TripEase.git" target="_blank" rel="noopener noreferrer">View Code</a>
+    </div>
+
+    <div class="project-card">
+      <h3>SkyTrust Bank Online Banking Web Application</h3>
+      <p>
+        Designed and implemented a full-stack banking platform using Java, JSP, Servlets, and JDBC.
+        Built secure modules for authentication, deposits, withdrawals, fund transfers, and
+        transaction monitoring with commit/rollback handling.
+      </p>
+      <p class="tech-stack">
+        <strong>Tech:</strong> Java, JSP, Servlets, JDBC, MySQL
+      </p>
+      <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git" target="_blank" rel="noopener noreferrer">View Code</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Enhanced Technique of Skin Cancer Classification</h3>
+      <p>
+        Developed a deep-learning-based skin cancer classification system using CNN architectures
+        such as VGG16, ResNet50, and EfficientNet. Applied transfer learning, preprocessing, and
+        augmentation techniques to improve accuracy and recall.
+      </p>
+      <p class="tech-stack">
+        <strong>Tech:</strong> Python, CNN, VGG16, ResNet50, EfficientNet, TensorFlow
+      </p>
+      <a href="https://github.com/nelakotisiva/Skin-Cancer-Classification-Using-Deep-Learning.git"
+         target="_blank" rel="noopener noreferrer">View Code</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2 class="section-title">Let's Connect!</h2>
+ <div class="contact-info">
+  <p>I’m actively seeking opportunities and collaborations.</p>
+
+  <a href="mailto:nelakotisiva@gmail.com">
+    <i class="fa-solid fa-envelope"></i>
+    nelakotisiva@gmail.com
+  </a>
+
+  <a href="tel:+918374265905">
+    <i class="fa-solid fa-phone"></i>
+    +91 8374265905
+  </a>
+
+  <a href="https://github.com/nelakotisiva" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-github"></i>
+    GitHub
+  </a>
+
+  <a href="https://linkedin.com/in/nelakotisiva" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-linkedin"></i>
+    LinkedIn
+  </a>
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+   Nelakoti Siva. Built with HTML, CSS & JavaScript.
+</footer>
 
 </body>
 </html>
