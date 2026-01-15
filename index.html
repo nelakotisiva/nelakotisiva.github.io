@@ -176,7 +176,7 @@
       font-size: 0.85rem;
     }
 
-    /* ================= PROJECTS ================= */
+    /* ================= PROJECTS / INTERNSHIP ================= */
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -248,11 +248,7 @@
       padding: 20px 0;
     }
 
-    /* ==================================================
-       RESPONSIVE FIXES (ONLY ADDITION – NO OTHER CHANGES)
-       ================================================== */
-
-    /* Mobile phones */
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 480px) {
       nav {
         flex-direction: column;
@@ -290,7 +286,6 @@
       }
     }
 
-    /* Tablets */
     @media (min-width: 481px) and (max-width: 768px) {
       .hero {
         padding: 60px 6%;
@@ -307,7 +302,6 @@
       }
     }
 
-    /* Small laptops */
     @media (min-width: 769px) and (max-width: 1024px) {
       .skills-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -318,7 +312,6 @@
       }
     }
 
-    /* Large screens */
     @media (min-width: 1200px) {
       .skills-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -333,19 +326,18 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <nav>
   <h2>Nelakoti Siva</h2>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#internship">Internship</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ================= HERO ================= -->
 <section id="home" class="hero">
   <img src="Myimage.JPG" alt="Nelakoti Siva – Java Full Stack Developer">
   <div class="hero-content">
@@ -357,13 +349,11 @@
     </p>
 
     <a href="Siva_resume_JFS.pdf" class="btn" download>
-      <i class="fa-solid fa-file-arrow-down"></i>
       Download CV
     </a>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
 <section id="about">
   <h2 class="section-title">About Me</h2>
 
@@ -391,7 +381,6 @@
   </div>
 </section>
 
-<!-- ================= SKILLS ================= -->
 <section id="skills">
   <h2 class="section-title">My Tech Stack</h2>
 
@@ -456,7 +445,24 @@
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<section id="internship">
+  <h2 class="section-title">Internship</h2>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Java Full Stack Development Intern</h3>
+      <h4 style="color:#555;">Pentagon Space | Jun 2025 – Jan 2026</h4>
+      <p>
+        Undergoing intensive Java Full Stack training with hands-on experience in building
+        end-to-end web applications and RESTful services.
+      </p>
+      <p class="tech-stack">
+        <strong>Tech:</strong> Java, Spring Boot, Servlets, JDBC, MySQL, HTML, CSS, JavaScript, React
+      </p>
+    </div>
+  </div>
+</section>
+
 <section id="projects">
   <h2 class="section-title">Featured Projects</h2>
 
@@ -484,38 +490,22 @@
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
 <section id="contact">
   <h2 class="section-title">Let's Connect!</h2>
 
   <div class="contact-info">
     <p>I’m actively seeking opportunities and collaborations.</p>
 
-    <a href="mailto:nelakotisiva@gmail.com">
-      <i class="fa-solid fa-envelope"></i>
-      nelakotisiva@gmail.com
-    </a>
-
-    <a href="tel:+918374265905">
-      <i class="fa-solid fa-phone"></i>
-      +91 8374265905
-    </a>
-
-    <a href="https://github.com/nelakotisiva" target="_blank">
-      <i class="fa-brands fa-github"></i>
-      GitHub
-    </a>
-
-    <a href="https://linkedin.com/in/nelakotisiva" target="_blank">
-      <i class="fa-brands fa-linkedin"></i>
-      LinkedIn
-    </a>
+    <a href="mailto:nelakotisiva@gmail.com">nelakotisiva@gmail.com</a>
+    <a href="tel:+918374265905">+91 8374265905</a>
+    <a href="https://github.com/nelakotisiva" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/nelakotisiva" target="_blank">LinkedIn</a>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
-  Nelakoti Siva. Built with HTML, CSS & JavaScript.
+  © 2026 Nelakoti Siva. All Rights Reserved. <br>
+  Built with HTML, CSS & JavaScript.
 </footer>
 
 </body>
