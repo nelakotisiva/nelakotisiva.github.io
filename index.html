@@ -6,321 +6,317 @@
   <title>Nelakoti Siva | Portfolio</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+/* ================= GOOGLE FONT ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-    body {
-      background-color: #f5f7fa;
-      color: #222;
-    }
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    /* ================= NAVBAR ================= */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #004aad;
-      color: white;
-      padding: 15px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+html{ scroll-behavior:smooth; }
 
-    nav h2 {
-      font-size: 1.4rem;
-      letter-spacing: 1px;
-    }
+body{
+background:#f4f7fb;
+color:#222;
+line-height:1.6;
+}
 
-    nav ul {
-      display: flex;
-      gap: 25px;
-      list-style: none;
-    }
+/* ================= NAVBAR ================= */
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 50px;
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+nav h2{
+color:#004aad;
+font-weight:700;
+letter-spacing:1px;
+}
 
-    nav a:hover {
-      color: #ffd700;
-    }
+nav ul{
+display:flex;
+list-style:none;
+gap:24px;
+}
 
-    /* ================= HERO ================= */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 10%;
-      gap: 40px;
-      background: white;
-    }
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+position:relative;
+transition:.3s;
+}
 
-    .hero img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #004aad;
-    }
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#004aad;
+transition:.3s;
+}
 
-    .hero-content {
-      max-width: 500px;
-    }
+nav a:hover
 
-    .hero-content h1 {
-      font-size: 2.4rem;
-      color: #004aad;
-    }
+nav a:hover::after{ width:100%; }
 
-    .hero-content h3 {
-      font-size: 1.3rem;
-      margin: 10px 0;
-      color: #555;
-    }
+/* ================= HERO ================= */
+.hero{
+min-height:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:60px 10% 50px;
+background:linear-gradient(180deg,#ffffff,#eef3ff);
+}
 
-    .hero-content p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #333;
-    }
+.hero img{
+width:240px;
+height:240px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #004aad;
+box-shadow:0 15px 35px rgba(0,74,173,.25);
+transition:.4s;
+}
 
-    .btn {
-      background: #004aad;
-      color: white;
-      padding: 10px 22px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
+.hero img:hover{ transform:scale(1.05); }
 
-    .btn:hover {
-      background: #007bff;
-    }
+.hero-content{ max-width:520px; }
 
-    /* ================= SECTIONS ================= */
-    section {
-      padding: 70px 10%;
-    }
+.hero-content h1{
+font-size:2.4rem;
+color:#004aad;
+margin-bottom:8px;
+}
 
-    h2.section-title {
-      color: #004aad;
-      font-size: 1.8rem;
-      margin-bottom: 25px;
-      border-left: 5px solid #004aad;
-      padding-left: 10px;
-    }
+.hero-content h3{
+font-weight:500;
+color:#555;
+margin-bottom:10px;
+}
 
-    p {
-      line-height: 1.7;
-    }
+.hero-content p{
+color:#444;
+margin-bottom:18px;
+}
 
-    /* ================= ABOUT ================= */
-    .education {
-      margin-top: 25px;
-    }
+.btn{
+display:inline-block;
+padding:10px 26px;
+background:linear-gradient(135deg,#004aad,#2b7bff);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+box-shadow:0 6px 18px rgba(0,74,173,.3);
+transition:.3s;
+}
 
-    .edu-item {
-      margin-bottom: 15px;
-    }
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,74,173,.45);
+}
 
-    .edu-item h4 {
-      color: #004aad;
-      font-size: 1.1rem;
-    }
+/* ================= SECTIONS ================= */
+section{ padding:60px 10%; }
 
-    /* ================= SKILLS ================= */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 25px;
-    }
+.section-title{
+font-size:2rem;
+margin-bottom:22px;
+color:#004aad;
+position:relative;
+padding-left:14px;
+}
 
-    .skills-card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.section-title::before{
+content:"";
+position:absolute;
+left:0;
+top:5px;
+width:6px;
+height:26px;
+background:#004aad;
+border-radius:4px;
+}
 
-    .skills-card:hover {
-      transform: translateY(-5px);
-    }
+/* ================= EDUCATION ================= */
+.edu-item{ margin-bottom:14px; }
 
-    .skills-card h3 {
-      margin-bottom: 10px;
-      color: #004aad;
-    }
+.edu-item h4{
+color:#004aad;
+font-weight:600;
+}
 
-    .skills-card span {
-      display: inline-block;
-      background: #004aad;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 4px;
-      font-size: 0.85rem;
-    }
+/* ================= SKILLS ================= */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
 
-    /* ================= PROJECTS / INTERNSHIP ================= */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+.skills-card{
+background:white;
+padding:22px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
 
-    .project-card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+.skills-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
 
-    .project-card:hover {
-      transform: translateY(-6px);
-    }
+.skills-card h3{
+color:#004aad;
+margin-bottom:10px;
+}
 
-    .project-card h3 {
-      color: #004aad;
-      margin-bottom: 10px;
-    }
+.skills-card span{
+display:inline-block;
+padding:5px 13px;
+margin:4px;
+background:#eef3ff;
+color:#004aad;
+border-radius:20px;
+font-size:.85rem;
+font-weight:500;
+transition:.25s;
+}
 
-    .project-card p {
-      font-size: 0.95rem;
-    }
+.skills-card span:hover{
+background:#004aad;
+color:white;
+}
 
-    .tech-stack {
-      margin-top: 10px;
-      font-size: 0.85rem;
-      color: #555;
-    }
+/* ================= PROJECTS ================= */
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
 
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #007bff;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.project-card{
+background:white;
+padding:22px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.35s;
+}
 
-    /* ================= CONTACT ================= */
-    .contact-info {
-      text-align: center;
-    }
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 35px rgba(0,0,0,.18);
+}
 
-    .contact-info a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 1.05rem;
-      margin: 10px 0;
-      color: #004aad;
-      transition: color 0.3s, transform 0.2s;
-      text-decoration: none;
-    }
+.project-card h3{
+color:#004aad;
+margin-bottom:8px;
+}
 
-    .contact-info a:hover {
-      color: #007bff;
-      transform: translateY(-2px);
-    }
+.project-card p{
+font-size:.95rem;
+color:#444;
+}
 
-    /* ================= FOOTER ================= */
-    footer {
-      background: #004aad;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
+.tech-stack{
+margin-top:10px;
+font-size:.85rem;
+color:#555;
+}
 
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 480px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 20px;
-      }
+.project-card a{
+display:inline-block;
+margin-top:12px;
+padding:6px 14px;
+border-radius:20px;
+background:#eef3ff;
+color:#004aad;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
 
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-      }
+.project-card a:hover{
+background:#004aad;
+color:white;
+}
 
-      .hero {
-        padding: 50px 20px;
-        text-align: center;
-      }
+/* ================= CONTACT ================= */
+.contact-info{ text-align:center; }
 
-      .hero img {
-        width: 160px;
-        height: 160px;
-      }
+.contact-info a{
+display:block;
+margin:10px 0;
+color:#004aad;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
 
-      .hero-content h1 {
-        font-size: 1.6rem;
-      }
+.contact-info a:hover{
+transform:translateY(-2px);
+color:#2b7bff;
+}
 
-      section {
-        padding: 50px 20px;
-      }
+/* ================= FOOTER ================= */
+footer{
+background:#004aad;
+color:white;
+text-align:center;
+padding:20px 10px;
+margin-top:30px;
+letter-spacing:.4px;
+}
 
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
+/* ================= MOBILE ================= */
+@media(max-width:768px){
 
-    @media (min-width: 481px) and (max-width: 768px) {
-      .hero {
-        padding: 60px 6%;
-        text-align: center;
-      }
+nav{
+flex-direction:column;
+gap:8px;
+padding:12px 20px;
+}
 
-      section {
-        padding: 60px 6%;
-      }
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:16px;
+}
 
-      .skills-grid,
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+.hero{
+flex-direction:column;
+text-align:center;
+padding:50px 20px 40px;
+}
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+.hero img{
+width:170px;
+height:170px;
+}
 
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+section{ padding:45px 20px; }
 
-    @media (min-width: 1200px) {
-      .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
+.hero-content h1{ font-size:1.9rem; }
 
-      .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
+}
+
   </style>
 </head>
 
@@ -337,61 +333,69 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
 <section id="home" class="hero">
   <img src="Myprofile.png" alt="Nelakoti Siva – Java Full Stack Developer">
+
   <div class="hero-content">
-    <h1>Hi, I'm Nelakoti Siva</h1>
-   <h3>Java Full Stack Developer | Software Engineer</h3>
+    <h1>Hi, I'm <span>Nelakoti Siva</span></h1>
+    <h3>Java Full Stack Developer | Software Engineer</h3>
 
-<p>
-  I design and develop Java-based full stack web applications with a strong focus on
-  backend logic, MVC architecture, database integration, and scalable system design.
-</p>
+    <p>
+      I develop scalable and secure web applications using Java, Spring Boot, and modern frontend technologies.
+      Focused on backend engineering, REST API design, and database-driven systems that deliver reliable real-world solutions.
+    </p>
 
-
-    <a href="Siva_Java_FullStack_Developer_resume.pdf" class="btn" download>
-      Download CV
+    <a href="Siva_Java_full_stack.pdf" class="btn" download>
+      Download Resume
     </a>
   </div>
 </section>
 
+
 <section id="about">
   <h2 class="section-title">About Me</h2>
-<p>
-  I am a Java Full Stack Developer with a strong foundation in backend development and
-  end-to-end web application design using Java and related technologies.
-</p>
 
-<p>
-  I have hands-on experience developing real-world applications, including a travel
-  booking platform and a secure online banking system.
-</p>
+  <p>
+    I'm a Java Full Stack Developer who enjoys turning ideas into real, working applications.
+    I specialize in backend development, API design, and integrating responsive user interfaces
+    with reliable server-side systems.
+  </p>
 
-<p>
-  I am actively seeking opportunities to apply my technical skills, contribute to
-  impactful projects, and continue growing as a Java Developer.
-</p>
+  <p>
+    I have built practical projects such as a travel booking platform and a secure online banking system,
+    where I implemented authentication, transactions, and database operations.
+  </p>
+
+  <p>
+    Currently seeking an entry-level Software Engineer or Java Developer role where I can contribute,
+    learn from experienced teams, and grow into a strong backend engineer.
+  </p>
+
 
   <div class="education">
     <h2 class="section-title">Education</h2>
 
     <div class="edu-item">
-      <h4>Sree Vidyanikethan Engineering College</h4>
-      <p>B.Tech in Electronics and Communication Engineering (2021–2025) | CGPA: 7.85/10</p>
+      <h4>B.Tech — Electronics & Communication Engineering</h4>
+      <p>Sree Vidyanikethan Engineering College (2021 – 2025)</p>
+      <p><strong>CGPA:</strong> 7.85 / 10</p>
     </div>
 
     <div class="edu-item">
-      <h4>Narayana Junior College, Pulivendula</h4>
-      <p>Intermediate (MPC) (2019–2021) | 82%</p>
+      <h4>Intermediate (MPC)</h4>
+      <p>Narayana Junior College, Pulivendula (2019 – 2021)</p>
+      <p><strong>Score:</strong> 82%</p>
     </div>
 
     <div class="edu-item">
-      <h4>Board of Secondary Education, Andhra Pradesh</h4>
-      <p>SSC (2018–2019) | GPA: 9.8/10</p>
+      <h4>SSC</h4>
+      <p>Board of Secondary Education, Andhra Pradesh (2018 – 2019)</p>
+      <p><strong>GPA:</strong> 9.8 / 10</p>
     </div>
+
   </div>
 </section>
+
 <section id="skills">
   <h2 class="section-title">My Tech Stack</h2>
 
@@ -399,52 +403,58 @@
 
     <div class="skills-card">
       <h3>Programming Languages</h3>
-      <span>Java (Core, OOP, Java 8)</span>
+      <span>Java (Core, OOP, Collections, Multithreading, Java 8)</span>
       <span>JavaScript</span>
       <span>SQL</span>
+      <span>HTML5</span>
+      <span>CSS3</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Frontend Technologies</h3>
+      <span>React.js</span>
+      <span>Bootstrap</span>
+      <span>Responsive Web Design</span>
     </div>
 
     <div class="skills-card">
       <h3>Backend Technologies</h3>
       <span>Java Servlets</span>
+      <span>JSP</span>
       <span>JDBC</span>
-      <span>Spring</span>
-      <span>Spring MVC</span>
-      <span>RESTful APIs</span>
-      <span>J2EE</span>
-      <span>Maven</span>
-    </div>
-
-    <div class="skills-card">
-      <h3>Frontend Technologies</h3>
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>JavaScript</span>
-      <span>Bootstrap</span>
-      <span>React.js (Basics)</span>
-    </div>
-
-    <div class="skills-card">
-      <h3>Frameworks & Libraries</h3>
       <span>Spring Framework</span>
+      <span>Spring MVC</span>
+      <span>Spring Boot</span>
+      <span>RESTful APIs</span>
+      <span>MVC Architecture</span>
+      <span>Session-based Authentication</span>
+    </div>
+
+    <div class="skills-card">
+      <h3>Database & ORM</h3>
+      <span>MySQL</span>
       <span>Hibernate (JPA)</span>
     </div>
 
     <div class="skills-card">
-      <h3>Databases</h3>
-      <span>MySQL</span>
-      <span>SQL</span>
+      <h3>Web & API Technologies</h3>
+      <span>HTTP/HTTPS</span>
+      <span>JSON</span>
+      <span>API Integration</span>
     </div>
 
     <div class="skills-card">
       <h3>Tools & Platforms</h3>
       <span>Git</span>
       <span>GitHub</span>
+      <span>Maven</span>
+      <span>Postman</span>
       <span>Apache Tomcat</span>
       <span>Eclipse</span>
       <span>Spring Tool Suite (STS)</span>
       <span>Visual Studio Code</span>
       <span>MySQL Workbench</span>
+      <span>MySQL Server</span>
     </div>
 
     <div class="skills-card">
@@ -452,116 +462,147 @@
       <span>Object-Oriented Programming (OOP)</span>
       <span>Data Structures & Algorithms (Basics)</span>
       <span>DBMS</span>
-      <span>MVC Architecture</span>
       <span>Session Management</span>
     </div>
 
   </div>
 </section>
-
 <section id="internship">
-  <h2 class="section-title">Internship</h2>
+  <h2 class="section-title">Internship Experience</h2>
 
   <div class="project-grid">
-    <div class="project-card">
-      <h3>Java Full Stack Development Intern</h3>
+    <div class="project-card reveal">
+
+      <h3>Java Full Stack Developer Intern</h3>
       <h4 style="color:#555;">Pentagon Space | Jun 2025 – Jan 2026</h4>
 
       <p>
-        Completed structured training in Java Full Stack Development covering core Java,
-        object-oriented programming concepts, and enterprise-level web application development.
+        Developed dynamic web applications using Java, Servlets, JSP, Spring MVC, and MySQL
+        following MVC architecture and clean coding practices.
       </p>
 
       <p>
-        Gained theoretical and practical understanding of MVC architecture, request-response
-        lifecycle, session management, and database connectivity using JDBC.
+        Built responsive frontend components using React.js, JavaScript, HTML, and CSS
+        and integrated them with backend REST APIs for real-time data interaction.
       </p>
 
       <p>
-        Studied backend development concepts including Servlets, Spring MVC, RESTful services,
-        and frontend fundamentals using HTML, CSS, JavaScript, and Bootstrap.
+        Implemented authentication, session handling, and CRUD operations using JDBC
+        ensuring secure and reliable data processing.
+      </p>
+
+      <p>
+        Debugged application issues, optimized SQL queries, and improved response time
+        by reducing redundant server calls.
       </p>
 
       <p class="tech-stack">
-        <strong>Tech Stack:</strong> Java, Java 8, Spring, Spring MVC, JSP, Servlets,
-        JDBC, MySQL, HTML, CSS, JavaScript, Bootstrap, Apache Tomcat
+        <strong>Tech Stack:</strong>
+        Java, Spring, Spring MVC, JSP, Servlets, JDBC, MySQL,
+        React.js, REST APIs, HTML, CSS, JavaScript, Bootstrap, Apache Tomcat
       </p>
+
     </div>
   </div>
 </section>
-
 <section id="projects">
   <h2 class="section-title">Featured Projects</h2>
 
   <div class="project-grid">
 
-    <!-- TripEase -->
-    <div class="project-card">
-      <h3>TripEase – Java Full Stack Travel Booking Web Application</h3>
+    <!-- Smart Bookmark CRUD Application -->
+    <div class="project-card reveal">
+      <h3>Smart Bookmark Manager – Full Stack CRUD Application</h3>
 
       <p>
-        Designed and developed a Java Full Stack travel booking web application for end users
-        to browse and book travel services including hotels, flights, cabs, restaurants,
-        and tour packages, following MVC architecture.
+        Developed a full-stack bookmark management application using React frontend
+        and Spring Boot REST APIs backend for storing and organizing user bookmarks.
       </p>
 
       <p>
-        Implemented secure user and admin dashboards with booking management,
-        session handling, and role-based access control.
+        Implemented create, update, delete and retrieve operations with structured
+        request-response communication and JSON data handling.
+      </p>
+
+      <p>
+        Added input validation and duplicate detection to maintain data integrity
+        and provide seamless real-time UI updates without page reload.
       </p>
 
       <p class="tech-stack">
-        <strong>Tech Stack:</strong> Java, JSP, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap, Apache Tomcat
+        <strong>Tech Stack:</strong>
+        React.js, JavaScript, Spring Boot, REST APIs, MySQL, JSON, HTTP
       </p>
 
-      <a href="https://github.com/nelakotisiva/TripEase.git" target="_blank">View Code</a>
+      <a href="https://github.com/nelakotisiva/Smart-Bookmark.git" target="_blank" class="project-btn">View Code</a>
     </div>
 
+    <!-- TripEase -->
+<div class="project-card reveal">
+  <h3>TripEase – Travel Booking Web Application</h3>
+
+  <p>
+  Developed a full-stack travel booking platform enabling users to search and book hotels, flights, cabs, restaurants and tour packages through a unified dashboard with separate user and admin modules, role-based authentication and session tracking.
+</p>
+
+<p>
+  Implemented complete booking lifecycle including availability checking, confirmation, cancellation and booking history using JDBC and MySQL with input validation and transaction handling, while following MVC architecture to maintain clear separation between presentation, business logic and database layers.
+</p>
+
+  <p class="tech-stack">
+    <strong>Tech Stack:</strong>
+    Java, JSP, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap, Apache Tomcat
+  </p>
+
+  <a href="https://github.com/nelakotisiva/TripEase.git" target="_blank" class="project-btn">View Code</a>
+</div>
+
     <!-- SkyTrust Bank -->
-    <div class="project-card">
-      <h3>SkyTrust Bank – Java Online Banking Web Application</h3>
+    <div class="project-card reveal">
+      <h3>SkyTrust Bank – Online Banking System</h3>
 
       <p>
-        Developed a secure Java-based online banking web application featuring user
-        authentication, account management, balance inquiry, and fund transfer functionality.
+        Developed a secure banking application supporting authentication,
+        account management, balance inquiry, and fund transfer operations.
       </p>
 
       <p>
-        Implemented session-based security and MVC architecture to ensure data integrity
-        and secure transactions.
+        Ensured transaction safety using session-based security and structured
+        database operations.
       </p>
 
       <p class="tech-stack">
-        <strong>Tech Stack:</strong> Java, JSP, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap
+        <strong>Tech Stack:</strong>
+        Java, JSP, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap
       </p>
 
-      <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git" target="_blank">View Code</a>
+      <a href="https://github.com/nelakotisiva/SkyTrust-Bank.git" target="_blank" class="project-btn">View Code</a>
     </div>
 
     <!-- Employee Management System -->
-    <div class="project-card">
-      <h3>Employee Management System – Java Full Stack Web Application</h3>
+    <div class="project-card reveal">
+      <h3>Employee Management System</h3>
 
       <p>
-        Designed and developed a Java-based employee management system to manage employee
-        records, roles, and CRUD operations using MVC architecture.
+        Created a web-based employee management application to handle employee
+        records and role-based CRUD operations.
       </p>
 
       <p>
-        Built user-friendly interfaces and integrated database operations for efficient
-        employee data management.
+        Integrated database connectivity and built responsive UI for efficient
+        data management.
       </p>
 
       <p class="tech-stack">
-        <strong>Tech Stack:</strong> Java, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap
+        <strong>Tech Stack:</strong>
+        Java, Servlets, JDBC, MySQL, HTML, CSS, Bootstrap
       </p>
 
-      <a href="https://github.com/nelakotisiva/EmpManagementgit.git" target="_blank">View Code</a>
+      <a href="https://github.com/nelakotisiva/EmpManagementgit.git" target="_blank" class="project-btn">View Code</a>
     </div>
 
   </div>
 </section>
-
 
 <section id="contact">
   <h2 class="section-title">Let's Connect!</h2>
